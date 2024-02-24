@@ -5,23 +5,16 @@ id: home
 permalink: /
 ---
 
-# Welcome! 🌱
+<strong style="font-weight:500;">About</strong>
 
-<p style="padding: 3em 1em; background: #f5f7ff; border-radius: 4px;">
-  Take a look at <span style="font-weight: bold">[[Your first note]]</span> to get started on your exploration.
-</p>
+<p style="color:#6f6e69;">I'm Akram! an applied researcher with a passion for Machine Learning & Geospatial Analysis. I worked on crop mapping using satellite data, extreme weather featurization, post-processing weather forecasts, and data-centric machine learning. I am deeply interested in neural-nets, weak supervision, and foundation models. You can check my work on <a href="https://github.com/Akramz">Github</a> and <a href="https://scholar.google.com/citations?user=m1J5OaIAAAAJ&hl=en&authuser=2">Scholar</a>.</p>
 
-This digital garden template is free, open-source, and [available on GitHub here](https://github.com/maximevaillancourt/digital-garden-jekyll-template).
-
-The easiest way to get started is to read this [step-by-step guide explaining how to set this up from scratch](https://maximevaillancourt.com/blog/setting-up-your-own-digital-garden-with-jekyll).
-
-<strong>Recently updated notes</strong>
-
+<strong style="font-weight:500;">Writing</strong>
 <ul>
   {% assign recent_notes = site.notes | sort: "last_modified_at_timestamp" | reverse %}
   {% for note in recent_notes limit: 5 %}
     <li>
-      {{ note.last_modified_at | date: "%Y-%m-%d" }} — <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
+      {{ note.last_modified_at | date: "%y · %m" }} — <a class="internal-link" href="{{ site.baseurl }}{{ note.url }}">{{ note.title }}</a>
     </li>
   {% endfor %}
 </ul>
